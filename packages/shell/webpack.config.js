@@ -35,7 +35,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "shell",
       remotes: {
-        app1: "app1", //key is the module alias, the value is the path
+        app1: "app1@http://localhost:3001/remoteEntry.js", //key is the module alias, the value is the path
       },
       shared: ["react", "react-dom"],
     }),
