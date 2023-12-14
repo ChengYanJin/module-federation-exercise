@@ -1,6 +1,9 @@
 import React, { Suspense } from "react";
-import { RedButton } from "app1/RedButton";
+// import { RedButton } from "app1/RedButton";
 // const aa = import("./GreenButton");
+import("./GreenButton").then((button) => {
+  console.log({ button });
+});
 
 const App = () => {
   // const [Greenbutton, setButton] = React.useState(null);
@@ -14,7 +17,7 @@ const App = () => {
   return (
     <div>
       shell-ui
-      <RedButton />
+      {/* <RedButton /> */}
       <Suspense fallback={<div>loading</div>}>
         <GreenButton />
       </Suspense>

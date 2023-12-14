@@ -1,4 +1,5 @@
 import React from "react";
-export const RedButton = () => {
+const RedButton = () => {
   return <button style={{ background: "red" }}>Red Button</button>;
 };
+export default RedButton;
